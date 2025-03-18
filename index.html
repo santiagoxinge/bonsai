@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Bonsáis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-info">
+            <h3>Santiago Parra</h3>
+            <p>Estudiante ingeniería de software</p>
+            <p>Primer semestre 1-b</p>
+        </div>
+        <h1>Bosque de Bonsáis</h1>
+        <div class="cart-icon">
+            <span id="cart-count">0</span>
+            <img src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/svg/cart-outline.svg" alt="Carrito">
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <h2>Catálogo de Bonsáis</h2>
+            <div class="products-container" id="products-container">
+                <!-- Los productos se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </section>
+
+        <section class="cart" id="cart-section">
+            <h2>Carrito de Compras</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Los items del carrito se cargarán dinámicamente -->
+            </div>
+            <div class="cart-total">
+                <h3>Total a pagar: <span id="cart-total">$0</span></h3>
+                <button id="checkout-btn" class="checkout-btn">Proceder al pago</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Método de pago:</label>
+                    <select id="payment-method" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="Bancolombia">Bancolombia</option>
+                        <option value="Nequi">Nequi</option>
+                        <option value="Davivienda">Davivienda</option>
+                        <option value="Nu">Nu</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="success-modal" id="success-modal">
+        <div class="modal-content">
+            <h2>¡Compra Realizada con Éxito!</h2>
+            <p>Gracias por tu compra. Volverás a la página principal en unos segundos.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bosque de Bonsáis - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
